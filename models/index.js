@@ -22,5 +22,5 @@ db.on("error", () => {
 });
 
 module.exports = {
-  Season: require("./playercard"),
+  PlayerCard: require("./playercard"),
 };
