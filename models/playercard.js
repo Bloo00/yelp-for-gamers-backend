@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const schema = new mongoose.Schema({
+const playerhema = new mongoose.Schema({
     username: String,
     comments: String,
     rateing: Number,

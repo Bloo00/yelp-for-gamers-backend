@@ -15,8 +15,9 @@ app.use((req, res, next) => {
 
   app.use(express.json());
   app.get('/playercard', async (request, response)=> {
+    console.log(request.query.username);
     try {
-        const PlayerCardArr = await PlayerCard.find({});
+        const PlayerCardArr = await PlayerCard.find({where: {name: request.query.username}});
         response.json({ PlayerCardArr });
     }
     catch(err) {
